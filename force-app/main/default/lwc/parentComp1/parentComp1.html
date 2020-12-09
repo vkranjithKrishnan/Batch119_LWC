@@ -1,0 +1,8 @@
+<template>
+   <lightning-card title="handle the event dispatched by child">        
+        <p class="slds-p-around_xx-small">
+            <lightning-progress-ring value={prop}></lightning-progress-ring>
+        </p>
+        <c-child-comp1 onmyevent={handleEventVar}></c-child-comp1>
+   </lightning-card> 
+</template>

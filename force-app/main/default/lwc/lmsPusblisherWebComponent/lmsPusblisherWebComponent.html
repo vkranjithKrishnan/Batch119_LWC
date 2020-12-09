@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="lmsPublisher Web component" icons-name="standard:logging">
+        <lightning-layout class="slds-var-m-around_medium" onselected={handleSelected}>
+            <lightning-layout-item>
+                <template if:true={contacts.data}>
+                    <template for:each={contacts.data} for:item="c">
+                        <c-contact-list-item key={c.Id} contact={c}
+                        class="slds-show slds-is-relative"
+                         ></c-contact-list-item>
+                    </template>
+                </template>
+            </lightning-layout-item>         
+        </lightning-layout>
+    </lightning-card>
+</template>

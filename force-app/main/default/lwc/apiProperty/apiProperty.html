@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Api Function Example" icon-name="standard:product_consumed">
+        <div class="slds-m-around_medium">
+            <lightning-input label="enter the percentage" value={percentage}
+             onchaneg={handlePercentage}></lightning-input>
+            <c-chart-bar percentage={percentage}></c-chart-bar>             
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="lds: create Record" icon-name="standard:account">
+        <div class="slds=m-around_medium">
+            <lightning-input value={name} onchange={handleOnChange} ></lightning-input>
+            <lightning-button label="Insert New Acc" variant="brand" 
+                              onclick={insertAccount}></lightning-button>
+            
+                <p>AccountId : {accountId}</p>
+        
+        </div>
+    </lightning-card>
+</template>

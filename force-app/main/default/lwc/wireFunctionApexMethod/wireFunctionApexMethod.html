@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Wire Function - Call Apex; parent to child" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+           <template if:true={accounts}>
+                <template for:each={accounts} for:item="a">
+                   <c-account-tile key={a.Id} acc={a}></c-account-tile>
+                </template>
+           </template>  
+           <template if:true={accountsError}>
+                {accountsError}
+           </template>         
+        </div>
+    </lightning-card>
+</template>

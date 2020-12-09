@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Call Apex - Imperatively" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <div class="slds-m-bottom_small">
+                <lightning-button label="Get Accounts" onclick={handleGetAccounts}></lightning-button>
+            </div>
+           <template if:true={accounts}>
+                <template for:each={accounts} for:item="a">
+                    <p key={a.Id}>{a.Name}</p>
+                </template>
+           </template>  
+           <template if:true={accountsError}>
+                {accountsError}
+           </template>         
+        </div>
+    </lightning-card>
+</template>

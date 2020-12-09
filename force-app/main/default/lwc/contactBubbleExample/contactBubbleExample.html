@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Child to Parent - Bubbling" icons-name="standard:logging">
+        <lightning-layout class="slds-var-m-around_medium">
+            <lightning-layout-item  onselected={handleOnSelected}>
+                <template if:true={contacts.data}>
+                    <template for:each={contacts.data} for:item="c">
+                        <c-contact-list-item key={c.Id} contact={c}
+                        class="slds-show slds-is-relative"
+                         ></c-contact-list-item>
+                    </template>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-m-left_medium">
+                <template if:true={selectedContact}>
+                    <img src={selectedContact.Picture__c} alt="Profile photo"/>
+                    <p>{selectedContact.PictureCon__c}</p>
+                    <p>{selectedContact.Name}</p>
+                    <p>{selectedContact.Title}</p>
+                    <p><lightning-formatted-phone value={selectedContact.Phone}></lightning-formatted-phone></p>
+                    <p><lightning-formatted-email value={selectedContact.Email}></lightning-formatted-email></p>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

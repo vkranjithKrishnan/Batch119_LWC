@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="web component as subcriber" icons-name="standard:logging"> 
+       <div>
+            <img src={Picture__c} alt="Profile photo"/>
+            <p>{PictureCon__c}</p>
+            <p>{Name}</p>
+            <p>{Title}</p>
+            <p><lightning-formatted-phone value={Phone}></lightning-formatted-phone></p>
+            <p><lightning-formatted-email value={Email}></lightning-formatted-email></p>
+        </div>
+    </lightning-card>
+</template>
